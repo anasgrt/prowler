@@ -54,7 +54,7 @@ resource "aws_codebuild_project" "prowler_codebuild_project" {
       value = var.default_region
     }
 
-    
+
     environment_variable {
       name  = "prowler_version"
       value = var.prowler_version
