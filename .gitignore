@@ -33,4 +33,5 @@ terraform.rc
 # Zip archive
 *.zip
 
-# Current Directory
+# vscode
+.vscode
