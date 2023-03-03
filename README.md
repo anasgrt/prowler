@@ -50,12 +50,10 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_access_key_id"></a> [access\_key\_id](#input\_access\_key\_id) | default access key id for the AWS prowler user | `string` | `""` | no |
 | <a name="input_default_region"></a> [default\_region](#input\_default\_region) | default AWS region for Prowler Security Assessment | `string` | `""` | no |
 | <a name="input_prowler_version"></a> [prowler\_version](#input\_prowler\_version) | Prowler Release Installation Version | `string` | `""` | no |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"eu-west-1"` | no |
-| <a name="input_schedule_expression"></a> [schedule\_expression](#input\_schedule\_expression) | Cloudwatch event rule expression triggered every day at 12:00pm UTC /NOT Netherlands time zone/ | `string` | `"cron(0 12 * * ? *)"` | no |
-| <a name="input_secret_key"></a> [secret\_key](#input\_secret\_key) | default secret key for the AWS prowler user | `string` | `""` | no |
+| <a name="input_schedule_expression"></a> [schedule\_expression](#input\_schedule\_expression) | Cloudwatch event rule expression triggered every day at 12:00pm UTC /NOT Netherlands time zone/ | `string` | `"cron(17 11 * * ? *)"` | no |
 
 ## Outputs
 
