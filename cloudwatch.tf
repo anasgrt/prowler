@@ -1,10 +1,10 @@
-resource "aws_cloudwatch_event_rule" "prowler_event_rule" {
-  name                = "periodical-daily-cloudwatch-event"
+resource "aws_cloudwatch_event_rule" "prowler" {
+  name                = "prowler-daily-cloudwatch-event"
   schedule_expression = var.schedule_expression
 }
 
-resource "aws_cloudwatch_event_target" "codebuild_event_target" {
-  rule      = aws_cloudwatch_event_rule.prowler_event_rule.name
+resource "aws_cloudwatch_event_target" "codebuild" {
+  rule      = aws_cloudwatch_event_rule.prowler.name
   target_id = "SendToCodeBuild"
   arn       = aws_codebuild_project.prowler_codebuild_project.arn
   role_arn  = aws_iam_role.codebuild_cloudwatch_trigger_role.arn
@@ -20,7 +20,6 @@ data "aws_iam_policy_document" "codebuild_cloudwatch_trigger_role" {
     }
   }
 }
-
 resource "aws_iam_role" "codebuild_cloudwatch_trigger_role" {
   name               = "prowler-codebuild-project-trigger-role"
   assume_role_policy = data.aws_iam_policy_document.codebuild_cloudwatch_trigger_role.json
@@ -38,6 +37,7 @@ resource "aws_iam_role_policy" "codebuild_cloudwatch_trigger_policy" {
   role   = aws_iam_role.codebuild_cloudwatch_trigger_role.id
   policy = data.aws_iam_policy_document.codebuild_cloudwatch_trigger_policy.json
 }
+
 
 
 

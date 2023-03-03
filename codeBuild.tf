@@ -1,5 +1,6 @@
 resource "aws_s3_bucket" "prowlerBucket" {
   bucket = "prowler-kabisa-bucket1985"
+  force_destroy = true
 }
 
 data "aws_iam_policy_document" "prowler_codebuild_role" {
@@ -40,37 +41,24 @@ resource "aws_codebuild_project" "prowler_codebuild_project" {
     image_pull_credentials_type = "CODEBUILD"
 
     environment_variable {
-      name  = "access_key_id"
-      value = var.access_key_id
-    }
-
-    environment_variable {
-      name  = "secret_key"
-      value = var.secret_key
-    }
-
-    environment_variable {
       name  = "default_region"
       value = var.default_region
     }
-
-
     environment_variable {
       name  = "prowler_version"
       value = var.prowler_version
     }
 
   }
-
   source {
     type      = "NO_SOURCE"
     buildspec = file("${path.module}/buildspec.yml")
   }
-
   tags = {
     Environment = "Prowler"
   }
 }
+
 
 
 

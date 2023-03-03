@@ -15,7 +15,7 @@ output "codebuild_project_arn" {
 
 output "cloudwatch_event_rule_id" {
   description = "Cloudwatch event rule id"
-  value       = aws_cloudwatch_event_rule.prowler_event_rule.id
+  value       = aws_cloudwatch_event_rule.prowler.id
 }
 
 output "S3_bucket_domain_name" {
