@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "prowlerBucket" {
-  bucket = "prowler-kabisa-bucket1985"
+  bucket        = "prowler-kabisa-bucket1985"
   force_destroy = true
 }
 
