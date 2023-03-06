@@ -4,7 +4,7 @@ resource "aws_s3_bucket" "prowlerBucket" {
 }
 // Codebuild IAM role:
 resource "aws_iam_role" "prowler_codebuild_role" {
-  name = "codebuild_bucket_role"
+  name               = "codebuild_bucket_role"
   assume_role_policy = data.aws_iam_policy_document.codebuild_assume_role_policy.json
 }
 
