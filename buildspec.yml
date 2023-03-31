@@ -9,7 +9,7 @@ phases:
     - prowler -v
   build:
     commands:
-    - prowler aws -f $default_region
+    - prowler aws -f $default_region -M html json-asff
 artifacts:
   files:
   - "**/*"
