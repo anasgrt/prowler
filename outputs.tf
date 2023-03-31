@@ -1,11 +1,11 @@
 output "s3_bucket_arn" {
   description = "S3 Bucket ARN"
-  value       = aws_s3_bucket.prowlerBucket.arn
+  value       = aws_s3_bucket.security_assessments.arn
 }
 
 output "s3_bucket_name" {
   description = "S3 Bucket Name (ID)"
-  value       = aws_s3_bucket.prowlerBucket.id
+  value       = aws_s3_bucket.security_assessments.id
 }
 
 output "codebuild_project_arn" {
@@ -20,5 +20,5 @@ output "cloudwatch_event_rule_id" {
 
 output "S3_bucket_domain_name" {
   description = "S3 Bucket Domain Name"
-  value       = aws_s3_bucket.prowlerBucket.bucket_domain_name
+  value       = aws_s3_bucket.security_assessments.bucket_domain_name
 }
