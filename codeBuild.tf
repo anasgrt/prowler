@@ -2,7 +2,7 @@
 resource "aws_codebuild_project" "prowler_codebuild_project" {
   name         = "prowler-codebuild-project"
   description  = "Prowler Codebuild Project"
-  service_role = aws_iam_role.prowler_codebuild_role.arn
+  service_role = aws_iam_role.prowler.arn
 
   artifacts {
     type     = "S3"
