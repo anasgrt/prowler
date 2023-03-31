@@ -5,8 +5,10 @@ resource "aws_codebuild_project" "prowler_codebuild_project" {
   service_role = aws_iam_role.prowler.arn
 
   artifacts {
-    type     = "S3"
-    location = aws_s3_bucket.security_assessments.id
+    type           = "S3"
+    location       = aws_s3_bucket.security_assessments.id
+    namespace_type = "BUILD_ID"
+    name           = "reports"
   }
 
   environment {
