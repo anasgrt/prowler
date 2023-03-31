@@ -1,5 +1,6 @@
+data "aws_caller_identity" "current" {}
 resource "aws_s3_bucket" "prowlerBucket" {
-  bucket        = "prowler-kabisa-bucket1985"
+  bucket        = "prowler-kabisa-${data.aws_caller_identity.current.account_id}"
   force_destroy = true
 }
 // Codebuild IAM role:
