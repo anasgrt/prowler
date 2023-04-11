@@ -11,7 +11,7 @@ to create a new event bus in this code and associate it with this scheduling.
 3- Schedule timing in this module is in (UTC) timing.
 
 ## Usage: 
-
+```terraform
 module "prowler" {
   source              = "git::github.com/kabisa/terraform-security-assessments.git?ref=MS-109-use-security-tool-prowler-for-security-assessments-on-client-aws-accounts"
   region              = var.region
