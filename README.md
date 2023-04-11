@@ -25,13 +25,13 @@ module "prowler" {
 | Name | Version |
 |------|---------|
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | ~> 1.3 |
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.53.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | ~> 4.9 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4.53.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | ~> 4.9 |
 
 ## Modules
 
@@ -65,7 +65,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_prowler_filter_region"></a> [prowler\_filter\_region](#input\_prowler\_filter\_region) | AWS region List for Prowler Security Assessment | `list(string)` | <pre>[<br>  "eu-west-1",<br>  "eu-central-1"<br>]</pre> | no |
+| <a name="input_prowler_filter_region"></a> [prowler\_filter\_region](#input\_prowler\_filter\_region) | AWS region List for Prowler Security Assessment | `list(string)` | `[]` | no |
 | <a name="input_prowler_version"></a> [prowler\_version](#input\_prowler\_version) | Prowler Release Installation Version | `string` | `"3.1.2"` | no |
 | <a name="input_region"></a> [region](#input\_region) | n/a | `string` | `"eu-west-1"` | no |
 | <a name="input_schedule_expression"></a> [schedule\_expression](#input\_schedule\_expression) | Cloudwatch event rule expression triggered every day at 12:00pm UTC /NOT Netherlands time zone/ | `string` | `"cron(0 12 * * ? *)"` | no |
