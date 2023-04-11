@@ -13,11 +13,9 @@ to create a new event bus in this code and associate it with this scheduling.
 ## Usage: 
 ```terraform
 module "prowler" {
-  source                     = "git::github.com/kabisa/terraform-security-assessments.git?ref=MS-109-use-security-tool-prowler-for-security-assessments-on-client-aws-accounts"
-  region                     = var.region
-  schedule_expression        = var.schedule_expression
-  prowler_filter_region      = var.prowler_filter_region
-  prowler_version            = var.prowler_version
+  source                     = "git@github.com:kabisa/terraform-security-assessments.git"
+  region                     = "eu-west-1"
+  prowler_filter_region      = ["eu-west-1"]
 }
 ```
 
