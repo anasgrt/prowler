@@ -10,7 +10,7 @@ variable "schedule_expression" {
 
 # this is the region variable for prowler executing command
 variable "prowler_filter_region" {
-  default     = ["eu-west-1", "eu-central-1"]
+  default     = []
   type        = list(string)
   description = "AWS region List for Prowler Security Assessment"
 }
