@@ -3,15 +3,15 @@ variable "region" {
 }
 
 variable "schedule_expression" {
-  default     = "cron(0 12 * * ? *)"
+  default     = "cron(12 09 * * ? *)"
   type        = string
   description = "Cloudwatch event rule expression triggered every day at 12:00pm UTC /NOT Netherlands time zone/"
 }
 
 # this is the region variable for prowler executing command
 variable "prowler_filter_region" {
-  default     = "eu-west-1"
-  type        = string
+  default     = ["eu-west-1", "eu-central-1"]
+  type        = list(string)
   description = "AWS region List for Prowler Security Assessment"
 }
 variable "prowler_version" {
