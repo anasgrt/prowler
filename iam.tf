@@ -153,3 +153,23 @@ resource "aws_iam_role_policy_attachment" "prowler_security_hub" {
   policy_arn = aws_iam_policy.prowler_security_hub.arn
   role       = aws_iam_role.prowler.name
 }
+
+
+/* resource "aws_iam_policy" "admin_policy" {
+  name        = "admin-policy"
+  policy      = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Effect = "Allow"
+        Action = "*"
+        Resource = "*"
+      }
+    ]
+  })
+} */
+
+/* resource "aws_iam_role_policy_attachment" "admin_policy_attachment" {
+  policy_arn = aws_iam_policy.admin_policy.arn
+  role       = aws_iam_role.prowler.name
+} */

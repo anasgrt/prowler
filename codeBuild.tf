@@ -18,8 +18,8 @@ resource "aws_codebuild_project" "prowler_codebuild_project" {
     image_pull_credentials_type = "CODEBUILD"
 
     environment_variable {
-      name  = "default_region"
-      value = var.default_region
+      name  = "prowler_filter_region"
+      value = var.prowler_filter_region
     }
     environment_variable {
       name  = "prowler_version"
