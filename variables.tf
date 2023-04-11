@@ -3,7 +3,7 @@ variable "region" {
 }
 
 variable "schedule_expression" {
-  default     = "cron(12 09 * * ? *)"
+  default     = "cron(0 12 * * ? *)"
   type        = string
   description = "Cloudwatch event rule expression triggered every day at 12:00pm UTC /NOT Netherlands time zone/"
 }
