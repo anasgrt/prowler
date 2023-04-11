@@ -19,7 +19,7 @@ module "prowler" {
   prowler_filter_region      = var.prowler_filter_region
   prowler_version     = var.prowler_version
 }
-
+```
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
