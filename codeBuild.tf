@@ -19,8 +19,8 @@ resource "aws_codebuild_project" "prowler_codebuild_project" {
 
     environment_variable {
       name  = "prowler_filter_region"
-      value = join(" ",var.prowler_filter_region)
-      type = "PLAINTEXT"
+      value = join(" ", var.prowler_filter_region)
+      type  = "PLAINTEXT"
     }
     environment_variable {
       name  = "prowler_version"
