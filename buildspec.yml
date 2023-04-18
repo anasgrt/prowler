@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+    - pip install prowler==$prowler_version
+  pre_build:
+    commands:
+    - prowler -v
+  build:
+    commands:
+    - prowler aws -f $prowler_filter_region -M html json-asff
+    # - for i in ${prowler_filter_region[@]}; do prowler aws -f $i; done
+artifacts:
+  files:
+  - "**/*"
+  name: prowlerCheck-$(date +%Y-%m-%d)
+
