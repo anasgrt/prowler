@@ -16,6 +16,3 @@ artifacts:
   - "**/*"
   name: prowlerCheck-$(date +%Y-%m-%d)
 
-
-
-

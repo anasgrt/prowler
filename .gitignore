@@ -7,6 +7,8 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+**/.terraform/
+**/secrets.auto.tfvars
 
 # Crash log files
 crash.log

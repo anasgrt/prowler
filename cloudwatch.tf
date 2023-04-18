@@ -38,8 +38,3 @@ resource "aws_iam_role_policy" "codebuild_cloudwatch_trigger_policy" {
   policy = data.aws_iam_policy_document.codebuild_cloudwatch_trigger_policy.json
 }
 
-
-
-
-
-
