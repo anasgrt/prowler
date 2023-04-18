@@ -1,6 +1,3 @@
-## Authors
-Module is maintained by [Anas AL Hamd] (https://github.com/anasnedtech).
-
 ## General Notes:
 1- Make sure that Cloudwatch(Event Bridge) default bus is in /STARTED/ state in /Schema discovery/)
 since the Cloudwatch scheduling is workable only in the default event bus, so it is not possible
